@@ -47,7 +47,7 @@ La solución consiste en un módulo formado por una placa de arduino, sensores d
 
 \begin{table}[h]
 	\centering
-	\caption[nuevas funcionalidades sobre el proyecto de Cadavid y Garcia]{nuevas funcionalidades}
+	\caption[Nuevas funcionalidades sobre el proyecto de Cadavid y Garcia]{nuevas funcionalidades}
 	\begin{tabular}{l l}    
 		\toprule
 		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
@@ -67,7 +67,7 @@ Su diseño consiste en una placa arduino que, a traves de sensores de humedad, r
 
 \begin{table}[h]
 	\centering
-	\caption[nuevas funcionalidades sobre el proyecto de Díaz y Sierra]{nuevas funcionalidades}
+	\caption[Nuevas funcionalidades sobre el proyecto de Díaz y Sierra]{nuevas funcionalidades}
 	\begin{tabular}{l l}    
 		\toprule
 		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
@@ -87,7 +87,7 @@ Este proyecto también utilizó una placa arduino, pero, a diferencia de los ant
 
 \begin{table}[h]
 	\centering
-	\caption[nuevas funcionalidades sobre el proyecto de Rocío González]{nuevas funcionalidades}
+	\caption[Nuevas funcionalidades sobre el proyecto de Rocío González]{nuevas funcionalidades}
 	\begin{tabular}{l l}    
 		\toprule
 		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
@@ -104,7 +104,7 @@ Este proyecto también utilizó una placa arduino, pero, a diferencia de los ant
 %----------------------------------------------------------------------------------------
 
 \section{Objetivos y alcance}
-El foco principal del proyecto se centra en tomar las pruebas de concepto desarrolladas en el laboratorio de software e integrarlas. De esta forma el objetivo principal es refinar la capa física y lógica, así como también definir y desarrollar la capa de transmisión de datos.
+El foco del desarrollo de este documento  se centra en tomar las pruebas de concepto desarrolladas en el laboratorio de software para finalizarlas e integrarlas.
 
 A continuación se listan los requerimientos y alcances de cada capa.
 \begin{enumerate}
@@ -136,7 +136,6 @@ Por otro lado, se detallan los requerimientos generales del sistema.
 			\item Debe tener un código interno para ser identificado unívocamente en el software de control.
 			\item Debe contar con una placa ESP32 más dos sensores de humedad (uno de ambiente y otro de suelo).
 			\item La placa ESP32 debe usar los sensores para medir los porcentajes correspondientes de las plantas de su sector. 
-			\item Debe centralizar las métricas obtenidas y contar con Wi-Fi para trasmitirlas a un servidor. 
 			\item Tiene que poder activar la apertura o cierre de una válvula de agua usando un comando interno.
 		\end{enumerate}
 	
@@ -151,7 +150,6 @@ Por otro lado, se detallan los requerimientos generales del sistema.
 			\item Debe permitir a un usuario loguearse al sistema usando su mail y constraseña.
 			\item Debe permitir a un usuario desloguearse del sistema.
 			\item Debe permitir a un usuario recuperar y cambiar su contraseña.
-			\item Debe tener una sección de visualización y modificación de los datos de perfil del usuario logueado.
 			\item Debe contemplar permisos para cada rol del sistema:
 			\begin{enumerate}
 			\item Administrador: acceso todas las funcionalidades.
@@ -163,17 +161,6 @@ Por otro lado, se detallan los requerimientos generales del sistema.
 			\item Debe tener una sección para administrar huertas vinculando el código de un dispositivo por sector.
 			\item Debe tener una sección para administrar los porcentajes de aceptación de humedad por sector.
 			\item Debe tener una sección para visualizar las mediciones de un dispositivo por sector.
-			\item Debe tener una sección para ver, modificar y eliminar usuarios con rol visitante para una huertas.
-			\item Debe tener una sección para ver, modificar y eliminar roles del sistema.
-			\item Debe tener una sección para asociar un rol a un usuario nuevo.
-			\item Debe permitir que un usuario (con rol responsable) solicite su alta en el sistema usando mail y password.
 		\end{enumerate}		
-		
-	\item Requerimientos no funcionales
-		\begin{enumerate}
-			\item El sistema deberá tener un usuario administrador por defecto.
-			\item Cada dispositivo deberá instalarse en un sector correctamente delimitado de la huerta.
-			\item La huerta va a contar con sectores con platas que tengan características de cuidado similares.
-		\end{enumerate}
 \end{enumerate}
 %----------------------------------------------------------------------------------------
