@@ -6,9 +6,9 @@ Este capítulo explica el marco contextual del problema y el rol de la UNLa en e
 \section{Marco de trabajo en la universidad}
 Este trabajo se originó en el contexto del laboratorio de investigación y desarrollo de la carrera de Licenciatura en Sistemas de la UNLa. En él se llevan adelante propuestas de diversos tipos, pero todas con un factor en común, generar conocimiento y lograr impacto positivo en la comunidad. Por este motivo se desarrollan sistemas orientados a pequeñas y medianas organizaciones. Siempre se busca brindar experiencia profesional a estudiantes, generar conocimientos nuevos en la carrera y/o trabajar en proyectos de bajo costo (o gratuitos) para las organizaciones que lo necesiten.
 
-En el laboratorio se llevan adelante diferentes tareas para definir en qué tipo proyectos de puede incursionar. En ese sentido se iniciaron investigaciones orientadas a temáticas sobre soberanía alimentaria [1] y empleo verde [2]. El foco principal se puso en investigar las nuevas tecnologías y propuestas en torno a la agricultura 4.0 [3]. Finalmente se inició una serie de cursos con la Universidad de Chile [4] en donde se participó en talleres sobre estas tópicos. Siendo los talleres del proyecto Piwkeyewün [5] los que inspiraron el inicio del proyecto en la UNLa.
+En el laboratorio se llevan adelante diferentes tareas para definir en qué tipo proyectos de puede incursionar. En ese sentido se iniciaron investigaciones orientadas a temáticas sobre soberanía alimentaria [1] y empleo verde [2]. El foco principal se puso en investigar las nuevas tecnologías y propuestas en torno a la agricultura 4.0 [3]. Finalmente se inició una serie de cursos con la Universidad de Chile en donde se participó en talleres sobre estas tópicos. Siendo los talleres del proyecto Piwkeyewün [4] los que inspiraron el inicio del proyecto en la UNLa.
 
-Gracias a toda esta investigación y preparación quedó expuesta la necesidad de iniciar un proyecto sobre IoT (internet de las cosas). El cual tuviera una orientación a la agricultura de uso común, con un equipo de trabajo formado por estudiantes y profesores. De esta forma, el laboratorio la carrera se propuso el objetivo de desarrollar un prototipo de genere acciones de cuidado y monitoreo sobre diversos cultivos en una huerta. Con vistas en tenerlo productivo en el mismo predio de la UNLa o en la sede de Abremate [6]. En ambos casos la idea es tener el sistema funcionando para generar muestras a estudiantes y visitantes.
+Gracias a toda esta investigación y preparación quedó expuesta la necesidad de iniciar un proyecto sobre IoT (internet de las cosas). El cual tuviera una orientación a la agricultura de uso común, con un equipo de trabajo formado por estudiantes y profesores. De esta forma, el laboratorio la carrera se propuso el objetivo de desarrollar un prototipo de genere acciones de cuidado y monitoreo sobre diversos cultivos en una huerta. Con vistas en tenerlo productivo en el mismo predio de la UNLa o en la sede de Abremate. En ambos casos la idea es tener el sistema funcionando para generar muestras a estudiantes y visitantes.
 
 %----------------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ Finalmente no se puede perder de vista el motivo inicial del proyecto. La inicia
 En esta sección se detallan proyectos de investigación y desarrollo similares al del presente trabajo. Cada uno fue analizado por el equipo del laboratorio y se hizo foco en buscar puntos de valor agregado.\\
 
 \subsection{Sistema de riego automatizado y monitoreo de variables ambientales}
-Este proyecto consistió en el diseño e implementación de un sistema IoT en los cultivos urbanos de la fundación mujeres empresarias Maria Poussepin [7].
+Este proyecto consistió en el diseño e implementación de un sistema IoT en los cultivos urbanos de la fundación mujeres empresarias Maria Poussepin [5].
 Fue desarrollado Valeria Cadavid y Marco Garcia en la Universidad Católica de Colombia.
 La solución consiste en un módulo formado por una placa de arduino, sensores de humedad, una placa LCD y un sistema de riego accionado por una electroválvula. Además, se utilizó una placa ESP8266 para enviar los datos vía WiFi a un servidor y visualizarlos en un gráfico. Sus bases se utilizaron inicialmente como información para buscar valor agregado. La propuesta de Cadavid y Garcia es muy similar a la del presente trabajo pero cuenta con diferencias, las cuales se presentan en la tabla número 1.1.\\
 
@@ -62,8 +62,8 @@ La solución consiste en un módulo formado por una placa de arduino, sensores d
 \end{table}
 
 \subsection{Sistema de riego automatizado basado en IoT}
-Este trabajo se centró en utilizar variables ambientales para cultivos de berenjena en la finca la esperanza del municipio de Chinú-Córdoba [8]. Fue llevado adelante por Eliécer Díaz y Jesús Sierra en la Universidad de Córdoba en Colombia. 
-Su diseño consiste en una placa arduino que, a traves de sensores de humedad, recoleta información de una huerta. Estos valores se envían a un servidor web y cuando están por debajo de un valor fijo se acciona una electrobomba para reglar los cultivos. Al igual que el proyecto anterior, este se utilizó para la generación de ideas y la búsquedas de valor agregado. En la tabla 1.2 se muestran las diferencias con el presente trabajo.\\
+Este trabajo se centró en utilizar variables ambientales para cultivos de berenjena en la finca la esperanza del municipio de Chinú-Córdoba [6]. Fue llevado adelante por Ramírez Díaz, Eliécer Jesús Vergara Sierra, Jesús David en la Universidad de Córdoba en Colombia. 
+Su diseño consiste en una placa arduino que, a través de sensores de humedad, recoleta información de una huerta. Estos valores se envían a un servidor web y cuando están por debajo de un valor fijo se acciona una electrobomba para reglar los cultivos. Al igual que el proyecto anterior, este se utilizó para la generación de ideas y la búsquedas de valor agregado. En la tabla 1.2 se muestran las diferencias con el presente trabajo.\\
 
 \begin{table}[h]
 	\centering
@@ -82,7 +82,7 @@ Su diseño consiste en una placa arduino que, a traves de sensores de humedad, r
 \end{table}
 
 \subsection{Sistema automatizado para riego en huertos urbanos y plantas}
-Este proyecto se propuso diseñar e implementar un sistema de riego automatizado de bajo costo. La autora menciona que su foco se puso en lograr una gestión de manera automática del suministro de agua, para de esta forma, lograr un riego optimo sobre los cultivos [9]. Fue desarrollado por Rocío González en la Universidad Técnica Federico Santa María en Chile.
+Este proyecto se propuso diseñar e implementar un sistema de riego automatizado de bajo costo. La autora menciona que su foco se puso en lograr una gestión de manera automática del suministro de agua, para de esta forma, lograr un riego optimo sobre los cultivos [7]. Fue desarrollado por Rocío González en la Universidad Técnica Federico Santa María en Chile.
 Este proyecto también utilizó una placa arduino, pero, a diferencia de los anteriores, fue conectada con varios tipos de sensores. Entre ellos sensores de humedad del sustrato, humedad ambiente, temperatura ambiente y luminosidad. Los datos visualizan en una pantalla LCD. Además, a través de una placa ESP8266 con módulo WifI se enviaban los datos a un servidor. Cuando los valores se colocan por debajo un número seleccionado, se activa una electrobomba para asegurar el riego. Como los proyectos anteriores, éste sirvió de ayuda para buscar mejoras y valor agregado. En la tabla 1.3 se presentan las diferencias con el actual trabajo.\\
 
 \begin{table}[h]
