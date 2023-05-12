@@ -8,14 +8,14 @@ Este trabajo se originó en el contexto del laboratorio de investigación y desa
 
 En el laboratorio se llevan adelante diferentes tareas para definir en qué tipo proyectos de puede incursionar. En ese sentido se iniciaron investigaciones orientadas a temáticas sobre soberanía alimentaria [1] y empleo verde [2]. El foco principal se puso en investigar las nuevas tecnologías y propuestas en torno a la agricultura 4.0 [3]. Finalmente se inició una serie de cursos en la Universidad de Chile en donde se participó en talleres sobre estas tópicos. Siendo los talleres del proyecto Piwkeyewün [4] los que inspiraron el inicio del proyecto en la UNLa.
 
-Gracias a toda esta investigación y preparación quedó expuesta la necesidad de iniciar un proyecto sobre IoT (internet de las cosas). El cual tuviera una orientación a la agricultura de uso común, con un equipo de trabajo formado por estudiantes y profesores. De esta forma, el laboratorio la carrera se propuso el objetivo de desarrollar un prototipo de genere acciones de cuidado y monitoreo sobre diversos cultivos en una huerta. Con vistas en tenerlo productivo en el mismo predio de la UNLa o en la sede de Abremate. En ambos casos la idea es tener el sistema funcionando para generar muestras a estudiantes y visitantes.\\
+Gracias a toda esta investigación y preparación quedó expuesta la necesidad de iniciar un proyecto sobre IoT (Internet de las cosas). Que tuviera una orientación a la agricultura de uso común, con un equipo de trabajo formado por estudiantes y profesores. De esta forma, el laboratorio de la carrera se propuso el objetivo de desarrollar un prototipo de genere acciones de cuidado y monitoreo sobre diversos cultivos en una huerta. Con vistas de tenerlo productivo en el mismo predio de la UNLa o en la sede de Abremate. En ambos casos la idea es tener el sistema funcionando para generar muestras a estudiantes y visitantes.\\
 
 %----------------------------------------------------------------------------------------
 
 \section{Motivación}
 A continuación se detalla el listado de motivaciones por parte del equipo de estudiantes y profesores de la UNLa. Las cuales no están relacionadas con el alcance del producto en sí, sino que con necesidades y verticales internas de trabajo de la carrera. 
 
-\subsection{Practicas profesionales para estudiantes}
+\subsection{Prácticas profesionales para estudiantes}
 Se buscó que en el proyecto puedan colaborar estudiantes para completar sus trabajos finales de la carrera. En concreto participaron:
 \begin{itemize}
 \item Damian Reboredo: investigación y prototipo de la capa física.
@@ -24,7 +24,7 @@ Se buscó que en el proyecto puedan colaborar estudiantes para completar sus tra
 \end{itemize}
 
 \subsection{Nuevos conocimientos para la carrera}
-Con la documentación del proyecto se quiere capitalizar el conocimiento adquirido para sumarlo en la carrera. Esto podría ser a través de cursos o talleres, materias nuevas, agregado de temas en materias existentes y/o documentación bibliográfica general. Cual de estas opciones se contemplan posibilidades una vez finalizado el proyecto.
+Con la documentación del proyecto se quiere capitalizar el conocimiento adquirido para sumarlo en la carrera. Esto podría ser a través de cursos o talleres, materias nuevas, agregado de temas en materias existentes y/o documentación bibliográfica general. Al finalizar el trabajo se contemplará cuál o cuáles de las opciones anteriores se podrían sumar.
 
 \subsection{Oportunidades de proyectos de investigación}
 De la misma manera que se apunta a estudiantes, también se espera la participación de profesores de la carrera en proyectos de investigación. Esto se relaciona con fortalecer y agregar nuevos conocimientos en el cuerpo docente. En este caso el autor de este trabajo es el profesor a cargo del proyecto. De esta forma el rol del docente se centra en guiar al equipo de desarrollo, buscar perfeccionamiento profesional y capitalizar las experiencias adquiridas en el marco de la carrera.
@@ -43,11 +43,11 @@ En esta sección se detallan proyectos de investigación y desarrollo similares 
 \subsection{Sistema de riego automatizado y monitoreo de variables ambientales}
 Este proyecto consistió en el diseño e implementación de un sistema IoT en los cultivos urbanos de la fundación mujeres empresarias Maria Poussepin [5].
 Fue desarrollado Valeria Cadavid y Marco Garcia en la Universidad Católica de Colombia.
-La solución consiste en un módulo formado por una placa de arduino, sensores de humedad, una placa LCD y un sistema de riego accionado por una electroválvula. Además, se utilizó una placa ESP8266 para enviar los datos vía WiFi a un servidor y visualizarlos en un gráfico. Sus bases se utilizaron inicialmente como información para buscar valor agregado. La propuesta de Cadavid y Garcia es muy similar a la del presente trabajo pero cuenta con diferencias, las cuales se presentan en la tabla número 1.1.\\
+La solución consiste en un módulo formado por una placa de arduino, sensores de humedad, una placa LCD y un sistema de riego accionado por una electroválvula. Además, se utilizó una placa ESP8266 [6] para enviar los datos vía Wi-Fi a un servidor y visualizarlos en un gráfico. Sus bases se utilizaron inicialmente como información para buscar valor agregado. La propuesta de Cadavid y Garcia es muy similar a la del presente trabajo pero cuenta con diferencias, las cuales se presentan en la tabla número 1.1.\\
 
 \begin{table}[h]
 	\centering
-	\caption[Nuevas funcionalidades sobre el proyecto de Cadavid y Garcia]{nuevas funcionalidades}
+	\caption[Nuevas funcionalidades sobre el proyecto de Cadavid y Garcia]{Nuevas funcionalidades.}
 	\begin{tabular}{l l}    
 		\toprule
 		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
@@ -62,12 +62,12 @@ La solución consiste en un módulo formado por una placa de arduino, sensores d
 \end{table}
 
 \subsection{Sistema de riego automatizado basado en IoT}
-Este trabajo se centró en utilizar variables ambientales para cultivos de berenjena en la finca la esperanza del municipio de Chinú-Córdoba [6]. Fue llevado adelante por Ramírez Díaz, Eliécer Jesús Vergara Sierra, Jesús David en la Universidad de Córdoba en Colombia. 
-Su diseño consiste en una placa arduino que, a través de sensores de humedad, recoleta información de una huerta. Estos valores se envían a un servidor web y cuando están por debajo de un valor fijo se acciona una electrobomba para reglar los cultivos. Al igual que el proyecto anterior, este se utilizó para la generación de ideas y la búsquedas de valor agregado. En la tabla 1.2 se muestran las diferencias con el presente trabajo.\\
+Este trabajo se centró en utilizar variables ambientales para cultivos de berenjena en la finca la esperanza del municipio de Chinú-Córdoba [7]. Fue llevado adelante por Ramírez Díaz, Eliécer Jesús Vergara Sierra, Jesús David en la Universidad de Córdoba en Colombia. 
+Su diseño consiste en una placa Arduino que, a través de sensores de humedad, recolecta información de una huerta. Estos valores se envían a un servidor web y cuando están por debajo de un valor fijo se acciona una electrobomba para regar los cultivos. Al igual que el proyecto anterior, este se utilizó para la generación de ideas y la búsquedas de valor agregado. En la tabla 1.2 se muestran las diferencias con el presente trabajo.\\
 
 \begin{table}[h]
 	\centering
-	\caption[Nuevas funcionalidades sobre el proyecto de Díaz, Sierra y David]{nuevas funcionalidades}
+	\caption[Nuevas funcionalidades sobre el proyecto de Díaz, Sierra y David]{Nuevas funcionalidades.}
 	\begin{tabular}{l l}    
 		\toprule
 		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
@@ -82,12 +82,12 @@ Su diseño consiste en una placa arduino que, a través de sensores de humedad, 
 \end{table}
 
 \subsection{Sistema automatizado para riego en huertos urbanos y plantas}
-Este proyecto se propuso diseñar e implementar un sistema de riego automatizado de bajo costo. La autora menciona que su foco se puso en lograr una gestión de manera automática del suministro de agua, para de esta forma, lograr un riego optimo sobre los cultivos [7]. Fue desarrollado por Rocío González en la Universidad Técnica Federico Santa María en Chile.
-Este proyecto también utilizó una placa arduino, pero, a diferencia de los anteriores, fue conectada con varios tipos de sensores. Entre ellos sensores de humedad del sustrato, humedad ambiente, temperatura ambiente y luminosidad. Los datos visualizan en una pantalla LCD. Además, a través de una placa ESP8266 con módulo WifI se enviaban los datos a un servidor. Cuando los valores se colocan por debajo un número seleccionado, se activa una electrobomba para asegurar el riego. Como los proyectos anteriores, éste sirvió de ayuda para buscar mejoras y valor agregado. En la tabla 1.3 se presentan las diferencias con el actual trabajo.\\
+En este proyecto se propuso diseñar e implementar un sistema de riego automatizado de bajo costo. La autora menciona que su foco se puso en lograr una gestión de manera automática del suministro de agua, para de esta forma, lograr un riego óptimo sobre los cultivos [8]. Fue desarrollado por Rocío González en la Universidad Técnica Federico Santa María en Chile.
+Este proyecto también utilizó una placa Arduino, pero, a diferencia de los anteriores, fue conectada con varios tipos de sensores. Entre ellos sensores de humedad del sustrato, humedad ambiente, temperatura ambiente y luminosidad. Los datos visualizan en una pantalla LCD. Además, a través de una placa ESP8266 con módulo Wi-Fi se enviaban los datos a un servidor. Cuando los valores se colocan por debajo un número seleccionado, se activa una electrobomba para asegurar el riego. Como los proyectos anteriores, este sirvió de ayuda para buscar mejoras y valor agregado. En la tabla 1.3 se presentan las diferencias con el actual trabajo.\\
 
 \begin{table}[h]
 	\centering
-	\caption[Nuevas funcionalidades sobre el proyecto de Rocío González]{nuevas funcionalidades}
+	\caption[Nuevas funcionalidades sobre el proyecto de Rocío González]{Nuevas funcionalidades.}
 	\begin{tabular}{l l}    
 		\toprule
 		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
@@ -112,12 +112,12 @@ A continuación se listan los requerimientos y alcances de cada capa.
 	\begin{enumerate}
 		\item Desarrollar el prototipo de la prueba de concepto.
 		\item Agregar la autenticación por parte del dispositivo.
-		\item Agregar la toma de datos del sistema por parámetros (WiFi, rutas del servidor y claves)
+		\item Agregar la toma de datos del sistema por parámetros (Wi-Fi, rutas del servidor y claves)
 		\item Desarrollar la integración con el comando de apertura de la válvula.
 	\end{enumerate}
 \item Capa de comunicación
 	\begin{enumerate}
-		\item Integrar el proyecto con broker IoT.
+		\item Integrar el proyecto con un broker IoT.
 		\item Agregar una capa de seguridad en la transferencia de los paquetes.
 		\item Tener una estrategia de backup de a información.
 	\end{enumerate}
