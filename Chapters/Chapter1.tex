@@ -1,18 +1,166 @@
 \chapter{Introducción general} % Main chapter title
 
+Este capítulo explica el marco contextual del problema y el rol de la UNLa en el proyecto. Además, detalla la motivación del equipo de profesores y estudiantes en el trabajo. Luego, presenta una descripción del estado del arte en relación a proyectos similares, que sirvieron como fuente de información. Finalmente, describe los objetivos y el alcance establecido para el presente documento.\\
+
 %----------------------------------------------------------------------------------------
-\section{Contexto de la situación}
+\section{Marco de trabajo en la universidad}
+Este trabajo se originó en el contexto del laboratorio de investigación y desarrollo de la carrera de Licenciatura en Sistemas de la UNLa. En él se llevan adelante propuestas de diversos tipos, pero todas con un factor en común, generar conocimiento y lograr impacto positivo en la comunidad. Por este motivo se desarrollan sistemas orientados a pequeñas y medianas organizaciones. Siempre se busca brindar experiencia profesional a estudiantes, generar conocimientos nuevos en la carrera y/o trabajar en proyectos de bajo costo (o gratuitos) para las organizaciones que lo necesiten.
+
+En el laboratorio se llevan adelante diferentes tareas para definir en qué tipo proyectos de puede incursionar. En ese sentido se iniciaron investigaciones orientadas a temáticas sobre soberanía alimentaria [1] y empleo verde [2]. El foco principal se puso en investigar las nuevas tecnologías y propuestas en torno a la agricultura 4.0 [3]. Finalmente se inició una serie de cursos en la Universidad de Chile en donde se participó en talleres sobre estas tópicos. Siendo los talleres del proyecto Piwkeyewün [4] los que inspiraron el inicio del proyecto en la UNLa.
+
+Gracias a toda esta investigación y preparación quedó expuesta la necesidad de iniciar un proyecto sobre IoT (internet de las cosas). El cual tuviera una orientación a la agricultura de uso común, con un equipo de trabajo formado por estudiantes y profesores. De esta forma, el laboratorio la carrera se propuso el objetivo de desarrollar un prototipo de genere acciones de cuidado y monitoreo sobre diversos cultivos en una huerta. Con vistas en tenerlo productivo en el mismo predio de la UNLa o en la sede de Abremate. En ambos casos la idea es tener el sistema funcionando para generar muestras a estudiantes y visitantes.\\
 
 %----------------------------------------------------------------------------------------
 
 \section{Motivación}
+A continuación se detalla el listado de motivaciones por parte del equipo de estudiantes y profesores de la UNLa. Las cuales no están relacionadas con el alcance del producto en sí, sino que con necesidades y verticales internas de trabajo de la carrera. 
+
+\subsection{Practicas profesionales para estudiantes}
+Se buscó que en el proyecto puedan colaborar estudiantes para completar sus trabajos finales de la carrera. En concreto participaron:
+\begin{itemize}
+\item Damian Reboredo: investigación y prototipo de la capa física.
+\item Luciano Otegui: investigación y desarrollo base del backend de la capa lógica.
+\item Guido Contento: investigación y desarrollo base del frontend de la capa lógica.
+\end{itemize}
+
+\subsection{Nuevos conocimientos para la carrera}
+Con la documentación del proyecto se quiere capitalizar el conocimiento adquirido para sumarlo en la carrera. Esto podría ser a través de cursos o talleres, materias nuevas, agregado de temas en materias existentes y/o documentación bibliográfica general. Cual de estas opciones se contemplan posibilidades una vez finalizado el proyecto.
+
+\subsection{Oportunidades de proyectos de investigación}
+De la misma manera que se apunta a estudiantes, también se espera la participación de profesores de la carrera en proyectos de investigación. Esto se relaciona con fortalecer y agregar nuevos conocimientos en el cuerpo docente. En este caso el autor de este trabajo es el profesor a cargo del proyecto. De esta forma el rol del docente se centra en guiar al equipo de desarrollo, buscar perfeccionamiento profesional y capitalizar las experiencias adquiridas en el marco de la carrera.
+
+\subsection{Oportunidades de congresos y conferencias}
+Otro punto importante es la posibilidad de participar en congresos y/o conferencias de informática. Una vez finalizado el proyecto se comenzará a investigar este tipo de oportunidades para enviar propuestas de charlas. Se busca representar a la UNLa y participar de comunidades tecnológicas.
+
+\subsection{Impacto positivo en la comunidad de la UNLa}
+Finalmente no se puede perder de vista el motivo inicial del proyecto. La iniciativa del producto y la idea de tenerlo funcionando en la universidad viene asociada con el hecho de tener huertas en la UNLa. Se quiere que con estas, no solo se pueda usar el sistema, sino que también se pueda proveer de alimentos a quienes lo necesiten. Para esto se va a estudiar el caso con las áreas que correspondan en la universidad. Por otro lado, también se espera que el producto pueda ser utilizado en organizaciones con lazos fuertes con la UNLa, tanto para temas de estudio, como de alimentación y nutrición.
 
 %----------------------------------------------------------------------------------------
 
 \section{Estado del arte}
+En esta sección se detallan proyectos de investigación y desarrollo similares al del presente trabajo. Cada uno fue analizado por el equipo del laboratorio y se hizo foco en buscar puntos de valor agregado.\\
+
+\subsection{Sistema de riego automatizado y monitoreo de variables ambientales}
+Este proyecto consistió en el diseño e implementación de un sistema IoT en los cultivos urbanos de la fundación mujeres empresarias Maria Poussepin [5].
+Fue desarrollado Valeria Cadavid y Marco Garcia en la Universidad Católica de Colombia.
+La solución consiste en un módulo formado por una placa de arduino, sensores de humedad, una placa LCD y un sistema de riego accionado por una electroválvula. Además, se utilizó una placa ESP8266 para enviar los datos vía WiFi a un servidor y visualizarlos en un gráfico. Sus bases se utilizaron inicialmente como información para buscar valor agregado. La propuesta de Cadavid y Garcia es muy similar a la del presente trabajo pero cuenta con diferencias, las cuales se presentan en la tabla número 1.1.\\
+
+\begin{table}[h]
+	\centering
+	\caption[Nuevas funcionalidades sobre el proyecto de Cadavid y Garcia]{nuevas funcionalidades}
+	\begin{tabular}{l l}    
+		\toprule
+		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
+		\midrule
+		Uso únicamente de placa ESP32           & Reducción de costos	\\		
+		Comandos a la placa desde un servidor          & Customización para el usuario\\	
+		Diseño modular de los sensores          & Permite agregar sensores diferentes\\	
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:peces}
+\end{table}
+
+\subsection{Sistema de riego automatizado basado en IoT}
+Este trabajo se centró en utilizar variables ambientales para cultivos de berenjena en la finca la esperanza del municipio de Chinú-Córdoba [6]. Fue llevado adelante por Ramírez Díaz, Eliécer Jesús Vergara Sierra, Jesús David en la Universidad de Córdoba en Colombia. 
+Su diseño consiste en una placa arduino que, a través de sensores de humedad, recoleta información de una huerta. Estos valores se envían a un servidor web y cuando están por debajo de un valor fijo se acciona una electrobomba para reglar los cultivos. Al igual que el proyecto anterior, este se utilizó para la generación de ideas y la búsquedas de valor agregado. En la tabla 1.2 se muestran las diferencias con el presente trabajo.\\
+
+\begin{table}[h]
+	\centering
+	\caption[Nuevas funcionalidades sobre el proyecto de Díaz, Sierra y David]{nuevas funcionalidades}
+	\begin{tabular}{l l}    
+		\toprule
+		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
+		\midrule
+		Uso de Placa ESP32           & Reducción de costos	\\		
+		Comunicación con WiFi          & Eliminación del cableado\\	
+		Rangos de aceptación dinámicos          & Cuztomización para el usuario\\		
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:peces}\\
+\end{table}
+
+\subsection{Sistema automatizado para riego en huertos urbanos y plantas}
+Este proyecto se propuso diseñar e implementar un sistema de riego automatizado de bajo costo. La autora menciona que su foco se puso en lograr una gestión de manera automática del suministro de agua, para de esta forma, lograr un riego optimo sobre los cultivos [7]. Fue desarrollado por Rocío González en la Universidad Técnica Federico Santa María en Chile.
+Este proyecto también utilizó una placa arduino, pero, a diferencia de los anteriores, fue conectada con varios tipos de sensores. Entre ellos sensores de humedad del sustrato, humedad ambiente, temperatura ambiente y luminosidad. Los datos visualizan en una pantalla LCD. Además, a través de una placa ESP8266 con módulo WifI se enviaban los datos a un servidor. Cuando los valores se colocan por debajo un número seleccionado, se activa una electrobomba para asegurar el riego. Como los proyectos anteriores, éste sirvió de ayuda para buscar mejoras y valor agregado. En la tabla 1.3 se presentan las diferencias con el actual trabajo.\\
+
+\begin{table}[h]
+	\centering
+	\caption[Nuevas funcionalidades sobre el proyecto de Rocío González]{nuevas funcionalidades}
+	\begin{tabular}{l l}    
+		\toprule
+		\textbf{Nueva funcionalidad} & \textbf{Mejora}\\	
+		\midrule
+		Uso de Placa ESP32           & Reducción de costos	\\		
+		Comandos a la placa desde un servidor          & Customización para el usuario\\	
+		Conexión editable con el servidor & Permite cambiar de servidor fácilmente\\	
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:peces}\\
+\end{table}
 
 %----------------------------------------------------------------------------------------
 
 \section{Objetivos y alcance}
+El foco del desarrollo de este documento  se centra en tomar las pruebas de concepto desarrolladas en el laboratorio de software para finalizarlas e integrarlas.
 
+A continuación se listan los requerimientos y alcances de cada capa.
+\begin{enumerate}
+\item Capa física
+	\begin{enumerate}
+		\item Desarrollar el prototipo de la prueba de concepto.
+		\item Agregar la autenticación por parte del dispositivo.
+		\item Agregar la toma de datos del sistema por parámetros (WiFi, rutas del servidor y claves)
+		\item Desarrollar la integración con el comando de apertura de la válvula.
+	\end{enumerate}
+\item Capa de comunicación
+	\begin{enumerate}
+		\item Integrar el proyecto con broker IoT.
+		\item Agregar una capa de seguridad en la transferencia de los paquetes.
+		\item Tener una estrategia de backup de a información.
+	\end{enumerate}
+\item Capa Lógica
+	\begin{enumerate}
+		\item Desarrollar las secciones de gestión de huertas y dispositivos.
+		\item Desarrollar al menos un gráfico de información de los datos obtenidos.
+		\item Evaluar y documentar magnitud de los datos y posible cambio de motor de base de datos. 
+	\end{enumerate}
+\end{enumerate}
+
+Por otro lado, se detallan los requerimientos generales del sistema.
+\begin{enumerate}
+	\item Requerimientos del dispositivo
+		\begin{enumerate}
+			\item Debe tener un código interno para ser identificado unívocamente en el software de control.
+			\item Debe contar con una placa ESP32 más dos sensores de humedad (uno de ambiente y otro de suelo).
+			\item La placa ESP32 debe usar los sensores para medir los porcentajes correspondientes de las plantas de su sector. 
+			\item Tiene que poder activar la apertura o cierre de una válvula de agua usando un comando interno.
+		\end{enumerate}
+	
+	\item Requerimientos de integración del backend del software
+		\begin{enumerate}
+			\item Debe contar con un endpoint rest API para consultar las mediciones de un dispositivo.
+			\item Debe contar con un endpoint rest API para solicitar a un dispositivo la apertura de la válvula de agua durante 30 segundos.
+			\end{enumerate}
+
+	\item Requerimientos del sistema para los usuarios
+		\begin{enumerate}
+			\item Debe permitir a un usuario loguearse al sistema usando su mail y contraseña.
+			\item Debe permitir a un usuario desloguearse del sistema.
+			\item Debe permitir a un usuario recuperar y cambiar su contraseña.
+			\item Debe contemplar permisos para cada rol del sistema:
+			\begin{enumerate}
+			\item Administrador: acceso todas las funcionalidades.
+			\item Responsable: acceso a las funcionalidades de administración de sus huertas.
+			\item Visitante: acceso a las funcionalidades de visualización de sus huertas asociadas.
+			\end{enumerate}
+			\item Debe tener una sección para ver, modificar y eliminar huertas del sistema.
+			\item Debe tener una sección para ver, modificar y eliminar usuarios del sistema.
+			\item Debe tener una sección para administrar huertas vinculando el código de un dispositivo por sector.
+			\item Debe tener una sección para administrar los porcentajes de aceptación de humedad por sector.
+			\item Debe tener una sección para visualizar las mediciones de un dispositivo por sector.
+		\end{enumerate}		
+\end{enumerate}
 %----------------------------------------------------------------------------------------

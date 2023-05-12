@@ -1,0 +1,153 @@
+\chapter{Introducción general} % Main chapter title
+
+Este capítulo explica el marco contextual del problema y el rol de la Universidad Nacional de Lanús en el proyecto. Además, detalla la motivación por parte del equipo de profesores y estudiantes para su participación. Luego, presenta una descripción del estado del arte de las tecnologías involucradas. También se mencionan los aportes y desarrollos hechos por estudiantes en el inicio de proyecto. Finalmente, describe los objetivos y el alcance establecido para el presente trabajo.
+
+%----------------------------------------------------------------------------------------
+\section{Marco de trabajo en la universidad}
+El presente trabajo se originó en el contexto del laboratorio de investigación y desarrollo, de la carrera de Licenciatura en Sistemas, de la Universidad Nacional de Lanús (UNLa). En él se llevan adelante propuestas de diversos tipos, pero todas con un factor en común, proveer el conocimiento y generar impacto positivo en la comunidad. Por este motivo en la UNLa se desarrollan sistemas para pequeñas y medianas organizaciones. Siempre se busca brindar experiencia profesional a estudiantes, generar conocimientos nuevos en la carrera y/o colaborar con proyectos de bajo costo (o gratuitos) a las organizaciones que lo necesiten.
+
+En este marco de trabajo en el laboratorio se llevan adelante diferentes tareas para definir en qué tipo proyectos de puede incursionar. En ese sentido se iniciaron diferentes investigaciones sobre temáticas soberanía alimentaria [1] y empleo verde [2]. El foco principal se puso en investigar las nuevas tecnologías y propuestas en torno a la agricultura 4.0 [3]. Finalmente se inició una serie de cursos con la Universidad de Chile [4] en donde se participó en talleres sobre estas temáticas. Siendo los talleres del proyecto Piwkeyewün [5] los que inspiraron el inicio del proyecto en la UNLa.
+
+Gracias a toda esta investigación y preparación quedó expuesta la necesidad de iniciar un proyecto sobre internet de las cosas (IoT). El cual tuviera una orientación a la agricultura de uso común, con un equipo de trabajo formado por estudiantes y profesores. De esta forma el laboratorio la carrera se propuso el objetivo de desarrollar un prototipo de genere acciones de cuidado y monitoreo sobre diversos cultivos en una huerta. Con vistas en poder tener productivo en el mismo predio de la UNLa o en la sede de Abremate [6]. En ambos casos la idea es tener el prototipo funcionando para generar muestras a estudiantes y visitantes de UNLa.
+
+%----------------------------------------------------------------------------------------
+
+\section{Motivación}
+Una vez propuesto el objetivo general del proyecto se detalló el listado de motivaciones por parte del equipo de la UNLa. Las cuales no están relacionadas con el alcance del producto, sino que más bien con necesidades y verticales de trabajo de la carrera. 
+
+\subsection{Practicas profesionales para estudiantes}
+Se buscó que en el proyecto puedan colaborar estudiantes para completar sus trabajos finales de la carrera. Concretamente participaron:
+\begin{itemize}
+\item Damian Reboredo: investigación y prototipo de la capa física.
+\item Luciano Otegui: investigación y desarrollo del backend de la capa lógica.
+\item Guido Contento: investigación y desarrollo del frontend de la capa lógica.
+\end{itemize}
+
+\subsection{Nuevos conocimientos para la carrera}
+Con la documentación del proyecto se quiere capitalizar el conocimiento adquirido para sumarlo en la carrera. Esto podría ser a través de cursos o talleres, materias nuevas, agregado de temas en materias existentes, documentación bibliográfica general. Cual de estas opciones se contemplan posibilidades una vez finalizado el proyecto.
+
+\subsection{Oportunidades de proyectos de investigación}
+De la misma manera que se apunta a estudiantes, también se espera que profesores de la carrera puedan participar en proyectos de investigación. Esto se relaciona con fortalecer y agregar nuevos conocimientos en el cuerpo docente. En este caso el autor de este trabajo es el profesor a cargo. De esta forma el rol del docente se centra en guiar al equipo de desarrollo, buscar perfeccionamiento profesional y capitalizar las experiencias adquiridas en el marco de la carrera.
+
+\subsection{Oportunidades de congresos y conferencias}
+Otro punto importante es la posibilidad de participar de congresos y/o conferencias de sistemas. Una vez finalizado el proyecto se comenzará a investigar este tipo de oportunidades para enviar propuestas de charlas. La idea es representar a la UNLa y participar de comunidades tecnológicas.
+
+\subsection{Impacto positivo en la comunidad de la UNLa}
+Finalmente no se puede perder de vista el motivo inicial del proyecto. La iniciativa del producto y la idea de tenerlo funcionando en la universidad viene asociada con el hecho de tener huertas. Se quiere que con estas no solo se pueda usar el sistema, sino que se pueda proveer de alimentos a quienes lo necesiten. Para esto se va a estudiar el caso con las áreas que correspondan en la universidad. Por otro lado, también se espera que el producto pueda ser utilizado en organizaciones con lazos fuertes con la UNLa, tanto para temas de estudio, como de alimentación y nutrición.
+
+%----------------------------------------------------------------------------------------
+
+\section{Estado del arte}
+A continuación se presentan los componentes y tecnologías utilizadas en el proyecto. Además, este trabajo tiene una previa investigación, diseño y desarrollo hecho por el equipo de estudiantes, por lo que también se incluye en esta sección.
+
+\subsection{Componentes y tecnologías}
+Las siguiente lista cuenta con las materiales tecnológicos base del proyecto y con las tecnologías de la capa lógica.\\
+
+\begin{itemize}
+\item NodeMCU ESP32.
+\item Sensor de temperatura y humedad relativa DHT11.
+\item Sensor de humedad en suelo capacitivo analógico V1.2 Premium.
+\item ADC ADS1115.
+\item Fabricación PCB 56x75 mm una capa.
+\item Java.
+\item Spring Boot.
+\item Java Script.
+\item React.
+\item MySQL.
+\item Git y Github.\\
+\end{itemize}
+
+\subsection{Proyectos similares}
+Los siguientes proyectos se analizaron en el equipo del laboratorio de software de sistemas.\\
+
+\begin{itemize}
+\item Sistema de riego automatizado y monitoreo de variables ambientales
+\end{itemize}
+Este proyecto consistió en el diseño e implementación de un sistema Iot en los cultivos urbanos de la fundación mujeres empresarias Maria Poussepin [7].
+Fue desarrollado Valeria Cadavid y Marco Garcia en la Universidad Católica de Colombia. Sus bases se utilizaron inicialmente como información para buscar valor agregado en el presente proyecto. Su propuesta es muy similar a la del presente trabajo pero cuenta con diferencias, las cuales se presentan en la tabla número 1.1.\\
+
+\begin{table}[h]
+	\centering
+	\caption[caption corto]{nuevas funcionalidades}
+	\begin{tabular}{l l}    
+		\toprule
+		\textbf{Presente trabajo} & \textbf{Cambios}\\	
+		\midrule
+		Uso de Placa ESP32           & Reducción de costos	\\		
+		Comandos a la placa desde el servidor          & Customización para el usuario\\	
+		Diseño modular de los sensores          & Permite agregar más sensores\\	
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:peces}
+\end{table}
+
+\begin{itemize}
+\item Sistema de riego automatizado basado en IoT
+\end{itemize}
+Este trabajo se centró en utilizar variables ambientales para cultivos de berenjena en la finca la esperanza del municipio de Chinú-Córdoba [8]. Fue llevado adelante por Eliécer Díaz y Jesús Sierra en la Universidad de Córdoba en Colombia. Al igual que el proyecto anterior se utilizó para la generación de ideas y la búsquedas de valor agregado. En la tabla 1.2 se muestran las diferencias con el presente trabajo.\\
+
+\begin{table}[h]
+	\centering
+	\caption[caption corto]{nuevas funcionalidades}
+	\begin{tabular}{l l}    
+		\toprule
+		\textbf{Presente trabajo} & \textbf{Cambios}\\	
+		\midrule
+		Uso de Placa ESP32           & Reducción de costos	\\		
+		Comunicación con WiFi          & Eliminación del cableado\\		
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:peces}\\
+\end{table}
+
+\subsection{Trabajo previo del laboratorio de sistemas UNLa}
+Por cada uno de los estudiantes del equipo se realizó un definición e investigación base del trabajo. Las documentaciones de sus proyectos finales están en construcción por lo que no se cuenta con su fuente como bibliografía.
+
+\begin{itemize}
+\item Diseño y desarrollo de un dispositivo de telemetría y control de código abierto para huertas.
+\end{itemize}
+Con el foco en la capa física, el estudiante Damian Reboredo diseño y desarrolló un prototipo para medir información de sensores de humedad. Dicho prototipo se pensó como una prueba de concepto. Esta presenta, en relación al presente trabajo, las diferencias de la tabla 1.3.\\
+
+\begin{table}[h]
+	\centering
+	\caption[caption corto]{nuevas funcionalidades}
+	\begin{tabular}{l l}    
+		\toprule
+		\textbf{Presente trabajo} & \textbf{Cambios}\\	
+		\midrule
+		Uso de un broker           & Mejoras en la escalabilidad	\\		
+		WiFi configurable          & Mejora el despliegue del sistema\\		
+		Uso de autenticación          & Mejora la seguridad del sistema\\		
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:peces}
+\end{table}
+
+\begin{itemize}
+\item Sistema de gestión para huertas agroecológicas IoT
+\end{itemize}
+Orientado a la capa lógica, los estudiantes Luciano Otegui y Guido Contento diseñaron y desarrollaron una aplicación backend y fronent base. La cual se centra en gestionar a los usuario y a las huertas. En la tabla 1.4 se presentan las diferentes con el presente trabajo.\\
+
+\begin{table}[h]
+	\centering
+	\caption[caption corto]{nuevas funcionalidades}
+	\begin{tabular}{l l}    
+		\toprule
+		\textbf{Presente trabajo} & \textbf{Cambios}\\	
+		\midrule
+		Integración con la capa física           & Obtención de métricas reales	\\		
+		Administración de dispositivos          & Trabajar con varias placas\\		
+		\bottomrule
+		\hline
+	\end{tabular}
+	\label{tab:peces}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+\section{Objetivos y alcance}
+
+%----------------------------------------------------------------------------------------
