@@ -6,7 +6,7 @@ En este capítulo se detallan los componentes y tecnologías que se seleccionaro
 Para la realización de la capa física hay cuatro componentes indispensables.
 
 \subsection{NodeMCU ESP32}
-Este es un microcontrolador que, como se menciona en la web de Espressif, se destaca por sus <<potentes módulos Wi-Fi + Bluetooth/Bluetooth LE que se dirigen a una amplia variedad de aplicaciones AIoT>> [9]. Es importante señalar que en el mundo de ESP existen dos familias, ESP8266 y ESP32. Entre ambas se opta por ESP32 porque es la nueva generación fabricada por Espressif. Además, cuentan con más documentación [10] y poseen mejoras en el hardware. Las cuales están asociadas a una mayor capacidad de procesamiento, de integración y una mejor placa de Wi-Fi. En la hoja de datos de la documentación oficial [11] podemos ver su descripción de hardware. En la figura 2.1, extraída de dicha documentación, podemos ver el diagrama de bloques del ESP32.
+Este es un microcontrolador que, como se menciona en la web de Espressif, se destaca por sus <<potentes módulos Wi-Fi + Bluetooth/Bluetooth LE que se dirigen a una amplia variedad de aplicaciones AIoT>> [9]. Es importante señalar que en el mundo de ESP existen dos familias, ESP8266 y ESP32. Entre ambas se opta por ESP32 porque es la nueva generación fabricada por Espressif. Además, cuentan con más documentación [10] y poseen mejoras en el hardware. Las cuales están asociadas a una mayor capacidad de procesamiento, de integración y una mejor placa de Wi-Fi. En la hoja de datos de la documentación oficial [11] podemos ver su descripción de hardware. En la figura 2.1, extraída de dicha documentación, se presenta el diagrama de bloques del ESP32.
 
 \begin{figure}[htpb]
 \centering 
@@ -15,7 +15,7 @@ Este es un microcontrolador que, como se menciona en la web de Espressif, se des
 \label{fig:diagBloques}
 \end{figure}
 
-A su vez, en la familia de ESP32 tenemos diferentes tipos de módulos [12]. Cada uno presenta pequeñas variaciones de hardware, comandos de integración de Firmware y cantidad de pines. En particular, para este trabajo se utiliza el módulo de WROOM. Más específicamente uno de los tableros de ESP32-devkit [13]. Además, existen diferentes versiones de tableros de desarrollo de WROOM para ESP32-DEVKIT. Por ello, para realizar las conexiones con los sensores, es fundamental tener conocimiento sobre la usabilidad de cada uno de los pines de la placa. Aunque esta información está disponible en la hoja de datos oficial, en caso de no tener tanto conocimiento técnico se sugiere revisar le posteo de <<ESP32 Peripherals>> en la web de RandomNerdTutorials [14], ya que es muy útil principiantes en la materia. En la figura 2.2 se presenta un diagrama de pines de dicha web.
+A su vez, en la familia de ESP32 tenemos diferentes tipos de módulos [12]. Cada uno presenta pequeñas variaciones de hardware, comandos de integración de firmware y cantidad de pines. En particular, para este trabajo se utiliza el módulo de WROOM. Más específicamente uno de los tableros de ESP32-devkit [13]. Además, existen diferentes versiones de tableros de desarrollo de WROOM para ESP32-DEVKIT. Por ello, para realizar las conexiones con los sensores, es fundamental tener conocimiento sobre la usabilidad de cada uno de los pines de la placa. Aunque esta información está disponible en la hoja de datos oficial, en caso de no tener tanto conocimiento técnico se sugiere revisar le posteo de <<ESP32 Peripherals>> de la web de RandomNerdTutorials [14], ya que es muy útil principiantes en la materia. En la figura 2.2 podemos ver un diagrama de pines de dicha web.
 
 \begin{figure}[htpb]
 \centering 
@@ -28,25 +28,52 @@ Para finalizar, se seleccionó esta placa no solo por lo expuesto anteriormente 
 
 \subsection{Sensor de temperatura y humedad relativa DHT11}
 Con este sensor se podrá realizar la obtención de valores de temperatura y humedad ambiente. Según se detalla en su hoja de datos [16] ofrece una señal digital confiable y estable.
-Este sensor cuenta con 4 pines, de los cuales usaremos los siguientes 3 (los pines se cuenta de izquierda a derecha con el sensor de frente):
+Este sensor cuenta con 4 pines, de los cuales usaremos los siguientes 3 (contando de izquierda a derecha con el sensor de frente):
 \begin{itemize}
 \item Pin 1: VDD (alimentación). Deberá recibir de 3,3 a 6 V. Se recomienda colocar un capacitor de 100nF entre este pin y el pin GND para su protección.
 \item Pin 2: DATA. Una vez establecida la conexión, este pin enviará los datos de temperatura y humedad relativa al módulo ESP.
-\item Pint 4: GND.
+\item Pin 4: GND.
 \end{itemize}
 
 \subsection{Sensor de humedad en suelo capacitivo analógico V1.2}
-Es un sensor se utiliza para medir la humedad del sustrato. Como se menciona en su hoja de datos [17] es una excelente opción ya que <<está hecho de un material resistente a la corrosión lo que le da una excelente vida útil>>. Cuenta con un conector de pines con las opciones de muy claros, VCC, GND y AOUT (datos analógicos). Se recomienda utilizar con una potencia entre 3,3 a 5 V.
+Es un sensor que se utiliza para medir la humedad del sustrato. Como se menciona en su hoja de datos [17] es una excelente opción ya que <<está hecho de un material resistente a la corrosión lo que le da una excelente vida útil>>. Este sensor cuenta con un conector de pines con especificaciones muy claras: VCC, GND y AOUT (datos analógicos). Se recomienda utilizar con una potencia de 3,3 a 5 V.
 
 \subsection{ADC ADS1115}
-Debido a que el sensor de humedad de suelo tiene mayores pruebas usando arduido (incluso en su hoja de datos) se va a utilizar un convertidor analógico digital con el ESP32. Se utilizaron como fuentes de información su hoja de datos [18] y un tutorial de <<Programar Fácil>>[19] donde se explica su utilidad y usos. De esta forma usaremos la señal analógica del sensor capacitivo para enviar los datos digitales a la placa ESP32.
+Debido a que el sensor de humedad de suelo tiene mayores pruebas y confiabilidad usando arduido (incluso en su hoja de datos) se va a agregar un convertidor analógico digital con el ESP32. Se utilizó como fuente de información su hoja de datos [18] y un tutorial de <<Programar Fácil>>[19] donde se explica su utilidad y usos. De esta forma se transformará la señal analógica, del sensor capacitivo, a digital para enviarla a la placa ESP32.
 
 %----------------------------------------------------------------------------------------
 
 \section{Herramientas de software}
 
+Para el desarrollo de software se trabajó con diferentes lenguajes de programación para el backend y el frontend. A su vez, en cada capa se definió el uso de frameworks que provean de funcionalidad base para agilizar el desarrollo. A continuación se detallan  las siguientes tecnologías.
+
+\subsection{Backend con Java y SpringBoot}
+Se optó por trabajar con Java [20] como lenguaje de programación, utilizando las librerías y funcionalidades que ofrece el framework de Spring Boot [21]. Con estas tecnologías se realiza:
+\begin{itemize}
+\item Conexión con la base de datos utilizando MySQL [22].
+\item Integración con la capa física.
+\item Desarrollo de los endpoints para integración con el frontend.
+\item Capa de validación y seguridad (para usuarios y dispositivos).
+\end{itemize}
+
+\subsection{Frontend con JavaScript y React}
+Con respecto al frontend se definió utilizar JavaScript [23] como lenguaje de programación y el conjunto de librerías de React [24] para el desarrollo de las vistas del sistema. Con estas herramientas se realiza:
+\begin{itemize}
+\item Bloqueo de urls no permitidas sin autenticación.
+\item Definición de componentes visuales del sistema para su re utilización.
+\item Maquetado con herramientas pre definidas de estilos css.
+\item Formularios reactivos.
+\end{itemize}
+
 %----------------------------------------------------------------------------------------
 
 \section{Desarrollo UNLa}
+Como se mencionó en la primer sección del documento, para este desarrollo se toma como input las pruebas de concepto y proyectos base hechos en el laborotario de software de la UNLa. A continuación se explica el foco de cada investigación por parte del equipo.
 
-%----------------------------------------------------------------------------------------
+\subsection{Prueba de concepto del dispositivo}
+En conjunto con Damian Reboredo se realizaron pruebas sobre la placa ESP32. Se logró llegar a un prototipo funcional donde los sensores descriptos anteriormente envían los datos a la placa. Además, se hizo una prueba de concepto para la apertura de la válvula. Finalmente, se realizó la programación para transmitir los datos a un servidor web, si bien los valores son fijos, se quería probar la conexión usando el protocolo http. El código del proyecto se alojó en un repositorio de la organización de proyectos del laboratorio [25].
+
+\subsection{Desarrollo base del backend y frontend}
+Por parte de la capa lógica, Luciano Otegui y Guido Contento hicieron foco en generar la base del backend y del frontend para el proyecto. Se realizó el armado de casos de uso y diagrama de clases. Por otra parte, crearon la estructura mínima del sistema para una correcta interacción de usuarios finales. Finalmente, se definieron las vistas y estilos generales del sitio. Al igual que el caso anterior, el código base del backend [26] y del frontend [27] se alojaron en repositorios del dominio de la universidad.
+
+%---------------------------------------------------------------------------------------
