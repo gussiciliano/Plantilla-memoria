@@ -36,7 +36,7 @@ Este sensor cuenta con 4 pines, de los cuales se utilizarán los siguientes 3 (n
 \end{itemize}
 
 \subsection{Sensor de humedad en suelo capacitivo analógico V1.2}
-Es un sensor que se utiliza para medir la humedad del sustrato. Como se menciona en su hoja de datos [17] es una excelente opción ya que <<está hecho de un material resistente a la corrosión lo que le da una excelente vida útil>>. Este sensor cuenta con un conector de pines con especificaciones muy claras: VCC, GND y AOUT (datos analógicos). Se recomienda utilizar con una potencia de 3,3 a 5 V.
+Es un sensor que se utiliza para medir la humedad del sustrato. Como se menciona en su hoja de datos [17] este componente es una excelente opción ya que, al estar fabricado con un material resistente a la corrosión, posee una excelente vida útil. Este sensor cuenta con un conector de pines con especificaciones muy claras: VCC, GND y AOUT (datos analógicos). Se recomienda utilizar con una potencia de 3,3 a 5 V.
 
 \subsection{ADC ADS1115}
 Debido a que el sensor de humedad de suelo tiene mayores pruebas y confiabilidad usando Arduino (incluso en su hoja de datos) se va a agregar un convertidor analógico digital con el ESP32. Se utilizó como fuente de información su hoja de datos [18] y documentación adicional [19]. De esta forma se transformará la señal analógica, del sensor capacitivo, a digital para enviarla a la placa ESP32.
